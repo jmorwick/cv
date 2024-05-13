@@ -1,0 +1,469 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008-2015 Nathaniel Johnston <nathaniel@njohnston.ca> http://www.njohnston.ca
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{tocloft}
+
+% The following two lines are needed to fix a MacTex compatibility issue
+% Thanks to Tony Blake for finding this fix!
+\usepackage{etoolbox}
+\robustify\cftdotfill
+
+
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Joseph Kendall-Morwick} & \textbf{December, 2020} \\
+Lawrence, KS, USA & jbmorwick@gmail.com \\
+ & http://joey.kendall-morwick.info/ \\
+\end{tabular*}
+\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+
+\item
+	\ressubheading{Indiana University}{Bloomington, IN}{Ph.D. Computer Science}{2007 - 2012}
+\item
+	\ressubheading{Indiana University}{Bloomington, IN}{M.S. Computer Science}{2005 - 2007}
+\item
+	\ressubheading{Ohio State University}{Columbus, OH}{B.S. Mathematics / Computer and Information Science}{1999 - 2003}
+\end{itemize}
+%%%%%%%%%%%%%%%%
+\resheading{Academic Employment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	\ressubheading{Park University}{Parkville, MO}{Assistant Professor}{Aug. 2021 - July 2022}
+\item
+	\ressubheading{Missouri Western State University}{St. Joseph, MO}{Assistant Professor}{Aug. 2017 - June 2021}
+\item
+	\ressubheading{University of Central Missouri}{Warrensburg, MO}{Assistant Professor}{Aug. 2016 - Jun. 2017}
+%	\begin{itemize}
+%		\resitem{Courses: Data Mining (CS 4630), Introduction to Machine Learning (CS 4710)}
+%	\end{itemize}
+%	\begin{itemize}
+%		\resitem{Courses: Issues in Database Management (COMP 630), Programming Languages (COMP 215)}
+%	\end{itemize}
+\item
+	\ressubheading{Capital University}{Columbus, OH}{Assistant Professor}{Aug. 2013 - May. 2015}
+%	\begin{itemize}
+%		\resitem{Courses: Introduction to UNIX (CS170) (2 sections), Programming in Java (CS175), Foundations of Computer Architecture (CS201) (3 sections), Introduction to Databases (CS230), Programming Languages (CS340), Operating Systems (CS380) (2 sections), Artificial Intelligence (CS470), Computer Networking (CS478), Intermediate Algebra (MATH110) (3 sections), College Algebra (MATH120) (3 sections), Discrete Mathematics (MATH251) }
+%	\end{itemize}
+\item
+	\ressubheading{DePauw University}{Greencastle, IN}{Visiting Assistant Professor}{Aug. 2011 - May. 2013}
+%	\begin{itemize}
+%		\resitem{Courses: Computer Science 1 (CSC121) (3 sections), Object-Oriented Software Development (CSC232) (4 sections), Operating Systems (CSC428) (2 sections), Senior Project (CSC498), PHP Programming (CSC296)}
+%	\end{itemize}
+\item
+	\ressubheading{Indiana University}{Boomington, IN}{Research Assistant / Associate Instructor / Instructor }{Jan. 2005 - May. 2010}
+%	\begin{itemize}
+%		\resitem{Course: Theory of Computing (B401) (2 sections)}
+%	\end{itemize}
+%\item
+%	\ressubheading{Indiana University}{Boomington, IN}{Co-Instructor}{Jan. 2009 - May. 2009}
+%	\begin{itemize}
+%		\resitem{Course: Introduction to Software Systems (C212)}
+%	\end{itemize}
+%\item 
+%	\ressubheading{Indiana University}{Boomington, IN}{Peer Tutoring Supervisor}{Aug. 2008 - Dec. 2008}
+%	\begin{itemize}
+%		\resitem{Course: Introduction to Software Systems (C212)}
+%	\end{itemize}
+%\item
+%	\ressubheading{Indiana University}{Boomington, IN}{Associate Instructor}{Aug. 2005 - Dec. 2007}
+%	\begin{itemize}
+%		\resitem{Courses Introduction to Programming I (A201), Introduction to Computer Science (C211), Introduction to Software Systems (C212), Theory of Computing (B501)}
+%	\end{itemize}
+%\item
+%	\ressubheading{Ohio State University}{Columbus, OH}{Grader / Tutor}{Aug. 2000 - Jun. 2004}
+%	\begin{itemize}
+%		\resitem{Courses: Elementary Computer Programming (201), Introduction to Computer Systems (360), Introduction to the Principles of Programming Languages (655), Introduction to Operating Systems (660), Survey of Artificial Intelligence II: Advanced Topics (730), Knowledge-Based Systems (731)}
+%	\end{itemize}
+%\item
+%	\ressubheading{Explorer Post 891}{Columbus, OH}{Volunteer Instructor}{Aug. 2001 - Jun. 2004}
+%	\begin{itemize}
+%		\resitem{Course: Java Programming}
+%	\end{itemize}
+\item
+	\ressubheading{Franklin University}{Columbus, OH}{Adjunct Instructor}{3 non-contiguous semesters}
+\end{itemize}
+
+\resheading{ Courses Taught }
+\begin{itemize}
+\item Introduction to Structured Programming (Washburn - CM 111) (5 sections)
+\item Discrete Mathematics for Computing (Washburn - MA 206) (3 sections) 
+\item Introduction to Computer Science (Washburn - CM 105) (2 sections)
+\item Data Mining (Washburn - CM 332) 
+\item Artificial Intelligence (Washburn - CM 331) 
+\item Object-Oriented Computer Programming (Park - CS 252)
+\item Information Security (Park - IS 370)
+\item Introduction to Python Programming (Park - CS 152) (3 sections)
+\item Introduction to Artificial Intelligence (Park - CS 305)
+\item Applied Computer Technology for Business (Park - IS 141)
+\item Application Server Programming (Franklin - COMP 321)
+\item Independent Study: various topics (MWSU - CSC 450) (17 students)
+\item Operating System Concepts (MWSU - CSC 386) (3 sections)
+\item Programming Languages and Paradigms (MWSU - CSC 246) (2 sections)
+\item Object-Oriented Computer Programming (MWSU - CSC 254) 
+\item Introduction to Computer Programming (MWSU - CSC 184) (12 sections)
+\item Data Analytics (MWSU - ACT 302) (3 sections)
+\item Software Testing and DevOps (MWSU - ACT 324) 
+\item The University Experience (MWSU - UNV 198) 
+\item Information Technology Project Management (MWSU - CSC 590) (2 sections)
+\item Information Assurance (MWSU - CSC 650) (2 sections)
+\item Introduction to Machine Learning (UCM - CS 4710) (3 sections)
+\item Data Mining (UCM - CS 4630) (5 sections)
+\item Issues in Database Management (Franklin - COMP 630) (3 sections)
+\item Programming Languages (Franklin - COMP 215) (1 section)
+\item Independent Study: Intelligent Agents (Capital - CS 491) (1 student)
+\item Independent Study: Outreach and Leadership in CS (Capital - CS 491) (1 student)
+\item Programming Languages (Capital - CS 340) (1 section)
+\item Introduction to UNIX (Capital - CS 170) (2 sections)
+\item Programming in Java (Capital - CS 175) (1 section)
+\item Computer Architecture (Capital - CS 201) (3 sections)
+\item Operating Systems (Capital - CS 380) (2 sections)
+\item Artificial Intelligence (Capital - CS 470) (1 section)
+\item Computer Networking (Capital - CS 478) (1 section)
+\item Discrete Mathematics (Capital - MATH 251) (1 section)
+\item Intermediate / College Algebra (Capital - MATH 110/120) (6 sections)
+\item Operating Systems (DePauw - CSC428) (2 sections)
+\item PHP Programming (DePauw - CSC 296) (1 section)
+\item Senior Project (DePauw - CSC498) (1 section)
+\item Object-Oriented Software Development (DePauw CSC 232) (4 sections)
+\item Computer Science I (DePauw - CSC 121) (3 sections)
+\item Theory of Computing (IU - B501) (2 sections)
+\item Introduction to Software Systems (IU - C212) (2 sections)
+\item Introduction to Programming I (IU - A201) (1 section)
+\end{itemize}
+
+%%%%%%%%%%%%%%
+\resheading{ Peer-Reviewed Publications, Conference Papers, and Technical Reports }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item 
+
+Kendall-Morwick, J. 2023 {\it Working With Ambiguous Case Representations}. Proceedings of the ICCBR 2023 Workshop on Beyond Attribute-Value Case Representation
+
+\item
+
+Kendall-Morwick, J. 2021 {\it Open-Source Scholarship at Teaching-Oriented Institutions}. Journal of Computing Sciences in Colleges
+
+\item
+
+Kendall-Morwick, J. 2020 {\it Using JShell in CS1}. Journal of Computing Sciences in Colleges
+
+\item
+
+Kendall-Morwick, J. and Leake, D. 2013 {\it Toward Addressing Noise and Redundancies for Cases
+Captured from Traces and Provenance}. In Proceedings of Experience Reuse: Provenance,
+Process-Orientation and Traces: S. J. Delany and S. Ontan Eds.
+
+%\begin{itemize}
+%\item Workshop presentation at the 12th International Conference on Case-Based Reasoning 
+
+%Sep. 4, 2013. Saratoga Springs, NY
+%\end{itemize}
+
+\item
+Kendall-Morwick, J. and Leake, D. 2013 {\it A Study of Two-Phase Retrieval for Process-Oriented
+Case-Based Reasoning}. Successful CBR Applications: Vol 2. S. Montani and S. Jain Eds.
+
+\item
+Kendall-Morwick, J. and Leake, D. 2012 {\it Facilitating representation and retrieval of structured
+cases: Principles and toolkit}. Information Systems, 2012.
+
+\item
+Kendall-Morwick, J. and Leake, D. 2012 {\it On Tuning Two-Phase Retrieval for Structured Cases}. In
+Proceedings of Process-Oriented Case-Based Reasoning (Lyon, France, September 3-6, 2012). L.
+Lamontagne and J. A. Recio-Garcia, Ed.
+%\begin{itemize}
+%\item Workshop presentation at the 12th International Conference on Case-Based Reasoning
+
+%Sep. 4, 2012. Lyon, France
+%\end{itemize}
+
+\item
+Kendall-Morwick, J. and Leake, D. 2011 {\it A Toolkit for Representation and Retrieval of Structured
+Cases}. In Proceedings of Process-Oriented Case-Based Reasoning (Greenwich, England, September
+12-15, 2011). C. Marling, Ed.
+
+\item
+
+Leake, D. and Kendall-Morwick, J. 2010 {\it External Provenance, Internal Provenance, and
+Case-Based Reasoning}. In Proceedings of Provenance-Aware CBR: Applications to Reasoning,
+Meta
+
+\item
+
+Kendall-Morwick, J. 2010 {\it Towards an Ensemble Framework for Assisting in Synthesis Tasks}. In
+Proceedings of the Twenty-Third International Florida Artificial Intelligence Research Society
+Conference (Daytona Beach, FL, May 19-21, 2010). H. Guesgen and R. Murray, Eds. AAAI Press
+2010.
+
+\item 
+
+Leake, D. and Kendall-Morwick, J. 2009. {\it Four Heads Are Better than One: Combining Suggestions for Case Adaptation}. In Proceedings of the 8th International Conference on Case-Based Reasoning: Case-Based Reasoning Research and Development (Seattle, WA, July 20 - 23, 2009). L. Mcginty, D. Wilson, Eds. Lecture Notes In Artificial Intelligence, vol. 5239. Springer-Verlag, Berlin, Heidelberg, 165-179. 
+%\begin{itemize}
+%\item Main track presentation at the 8th International Conference on Case-Based Reasoning 
+
+%Jul. 20 - Jul. 23, 2009.  Seattle, WA
+%\end{itemize}
+
+Leake, D. and Kendall-Morwick, J. 2008. {\it Towards Case-Based Support for e-Science Workflow Generation by Mining Provenance}. In Proceedings of the 9th European Conference on Advances in Case-Based Reasoning (Trier, Germany, September 01 - 04, 2008). K. Althoff, R. Bergmann, M. Minor, and A. Hanft, Eds. Lecture Notes In Artificial Intelligence, vol. 5239. Springer-Verlag, Berlin, Heidelberg, 269-283. 
+%\begin{itemize}
+%\item Main track presentation at the 9th European Conference on Case-Based Reasoning
+
+%Sep. 1 - Sep. 4, 2008.  Trier, Germany
+%\end{itemize}
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Other Presentations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+
+\item {\it Three Perspectives through Six Eras of Artificial Intelligence}
+Invited Talk at the meeting of the Athiest Community of Topeka, Aug. 13, 2023. Topeka, KS
+
+\item {\it ** Park Talk}
+???, ???. ??, 2022. Parkville, MO
+
+\item {\it Social Media and Civic Engagement}
+Washburn University - Invited Panel Discussion, Feb. 21, 2020. Topeka, KS
+
+\item {\it Public Squares or Private Platforms: A Discussion about Social Media and Free Speech}
+Washburn University - Invited Panel Discussion, May. 1, 2019. Topeka, KS
+
+\item {\it Machine Learning's Human Problem}
+Highland Community College - Invited Talk, Apr. 8, 2019. Highland, KS
+
+\item {\it Aligning Computing Curriculum with Multiple Bodies of Curriculum Guidelines}
+CCSC:CP, Apr. 6, 2019. Cottleville, MO
+
+\item {\it Incorporating Recent Java Platform Updates in to CS1 Courses}
+CCSC:CP, Apr. 6, 2018. Maryville, MO
+
+\item {\it Are the Geek Culture Wars Keeping Women out of STEM?}
+Washburn University - Gender Brown Bag Talk, Aug. 26, 2015. Topeka, KS
+
+\item {\it The Need for Voices in CS to Address the \#GamerGate Controversy}
+SIGCSE, Mar. 4, 2015. Kansas City, MO
+
+%\item {\it Toward Addressing Noise and Redundancies for Cases Captured from Traces and Provenance}
+%Experience Reuse: Provenance, Process-Orientation and Traces, Sep. 4, 2013. Saratoga Springs, NY
+
+%\item {\it On Tuning Two-Phase Retrieval for Structured Cases} The 2nd Workshop on Process-Oriented
+%Case-Based Reasoning, Sep. 4, 2012. Lyon, France
+
+\item {\it Move Towards the Light} Invited Talk at The Doctoral Consortium at the 11th International
+Conference on Case-Based Reasoning, Sep. 3, 2012. Lyon, France
+
+%\item {\it Four Heads Are Better than One: Combining Suggestions for Case Adaptation} The 8th %International Conference on Case-Based Reasoning, Jul. 20 - Jul. 23, 2009.  Seattle, WA
+
+%\item Invited Guest Lecture on applying CBR to workflow authoring in the course {\it Topics in Data and Search Informatics} at Indiana University, Nov. 17, 2008.  Bloomington, IN
+
+\item {\it Leveraging Provenance for Case-Based Support of e-Science Experimentation}.  Invited talk at Data and Search Institute Seminar Series, Indiana University, Oct. 22, 2008.  Bloomington, IN
+
+%\item {\it Towards Case-Based Support for e-Science Workflow Generation by Mining Provenance} The 9th European Conference on Advances in Case-Based Reasoning, Sep. 1 - Sep. 4, 2008.  Trier, Germany
+
+%\item {\it DJMIRI: a Dynamic Java-based Music Information Retrieval Interface}.  Invited Guest Lecture in the course {\it Organization of and Searching in Musical Information} at Indiana Universty, Apr. 24, 2006.  Bloomington, IN
+
+\item {\it Internet Trolls as a Consequence of a Broken Communication Medium}. Time / Passages: A National Interdisciplinary Graduate Student Conference, Mar. 22 - Mar. 24, 2007.  Bloomington, IN
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Service to Profession}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item 
+	\ressubheading{International Conference on Case-Based Reasoning}{}{PC Member}{2016-current} 
+\item 
+	\ressubheading{Florida Artificial Intelligence Research Association International Conference}{}{PC Member}{2011-2021}
+\item 
+	\ressubheading{Florida Artificial Intelligence Research Association International Conference}{}{Special Track PC Member}{2018-2021}
+\item 
+	\ressubheading{Florida Artificial Intelligence Research Association International Conference}{}{Special Track Chair}{2014-2015, 2017}
+\item 
+	\ressubheading{International Conference on Case-Based Reasoning}{Frankfurt, Germany}{Workshop Program Chair}{2015}
+\item 
+	\ressubheading{Recognizing and Combating Misogyny in Tech Culture}{Columbus, OH}{Moderator / Organizer of Roundtable Discussion}{Mar. 2014}
+\item 
+	\ressubheading{Consortium for Computing Sciences in Colleges : Midwest}{Chicago, IL}{Coach for the Indiana University programming teams}{2009}
+\item 
+	\ressubheading{IEEE 4th International Conference on eScience}{Indianapolis, IN}{Conference Volunteer}{2008}
+\item 
+	\ressubheading{Just Be}{Bloomington, IN}{Presenter}{Aug. 2008 - Dec. 2008}
+		
+{\it Just Be} is an outreach program which introduces K-12 students to Computer Science
+\item 
+	\ressubheading{Bring IT On! Reunion Workshop}{Indianapolis, IN}{Assistant Organizer}{2008}
+\item 
+	\ressubheading{Bring IT On! Workshop}{Bloomington, IN}{Assistant Organizer}{2007}
+\item 
+	\ressubheading{IU Computer Science and Informatics Graduate Research Symposium}{Bloomington, IN}{Co-Coordinator}{2008}
+%\item advice panel 8/2006
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Service to Institution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item 
+	\ressubheading{CIS Department}{Washburn University - Topeka, KS}{ByteBods Student Organization Advisor}{Fall 2022 - current}
+\item 
+	\ressubheading{CSMP Department}{Missouri Western State University - St. Joseph, MO}{Computer Science Discipline Coordinator}{Fall 2019 - Spring 2021}
+\item 
+	\ressubheading{ACM MWSU Student Chapter}{Missouri Western State University - St. Joseph, MO}{Faculty Advisor}{Fall 2019 - Spring 2021}
+\item 
+	\ressubheading{Programming Team}{Missouri Western State University - St. Joseph, MO}{Coach}{2017 - Spring 2021}
+\item 
+	\ressubheading{Evaluation of Faculty Committee Member}{Missouri Western State University - St. Joseph, MO}{}{Fall 2018 - 2020}
+\item 
+	\ressubheading{Bruning Award Committee}{Capital University - Columbus, OH}{Committee member}{2013 - 2014}
+\item 
+	\ressubheading{Programming Team}{Capital University - Columbus, OH}{Coach}{2012 - 2014}
+\item 
+	\ressubheading{DePauw Open-Source (student organization)}{DePauw University - Greencastle, IN}{Faculty Advisor}{2011 - 2012}
+\item 
+	\ressubheading{Programming Team}{DePauw University - Greencastle, IN}{Coach}{2010 - 2012}
+\item 
+	\ressubheading{Programming Team}{Indiana University - Bloomington, IN}{Coach}{2009 - 2010}
+\item 
+	\ressubheading{Computer Science Graduate Student Association}{Indiana University - Bloomington, IN}{President}{2007 - 2008}
+\end{itemize}
+
+%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Work and Volunteer Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+
+
+\item 
+	\ressubheading{Red Fuse Communications}{Kansas City, MO}{Application Developer}{Aug. 2015 - Aug. 2016}
+	\begin{itemize}
+		\resitem{ Developed Java-based web applications for Hill's Nutrition}
+		\resitem{ Collaborate with an international team of developers and content experts to localize websites for countries in every continent}
+	\end{itemize}
+	
+\item 
+	\ressubheading{Code for Kansas City}{Kansas City, MO}{Volunteer}{Mar. 2015 - Mar. 2016}
+	\begin{itemize}
+		\resitem{ Assisted in designing and developing stage 1 of ``Safe Assist'' -- a web application for allowing citizens to assist first responders in safely serving citizens with special needs }
+	\end{itemize}
+
+\item 
+	\ressubheading{Scalable Network Technologies}{Los Angeles, CA}{Software Developer}{May. 2009 - Aug. 2009}
+	\begin{itemize}
+		\resitem{ Developed statistics tracking code for a large-scale C++ application for simulating networking scenarios}
+		\resitem{ Developed network test scenarios to evaluate a client's emerging wireless technology}
+        \resitem{ Analyzed results from test scenarios and produced reports and presentations for clients}
+	\end{itemize}
+
+
+\item 
+	\ressubheading{Moodle}{Google Summer of Code}{Software Developer}{Jun. 2008 - Aug. 2008}
+	\begin{itemize}
+		\resitem{Worked remotely with an international team of open-source developers on the Moodle learning management system (LMS) through a Google sponsored program.  }
+		\resitem{Designed and integrated a system for organizing blog posts among the particular classes, groups, or projects a student is involved in, among other improvements to the blog system.  }
+	\end{itemize}
+
+\item
+	\ressubheading{eSchool Consultants}{Reynoldsburg, OH}{Software Developer}{Jul. 2004 - Jul. 2005}
+	\begin{itemize}
+		\resitem{Developed web applications with PHP to maintain a mySQL database of student records and provide instructors with intuitive interfaces to access data and reports.  }
+		\resitem{Transferred the school’s 3rd party LMS (Learn.com) to an in-house open-source LMS (Moodle), and integrated this system into the school’s existing management software.  }
+		\resitem{Integrated the use of barcode scanners for the purpose of equipment tracking.}
+	\end{itemize}
+\end{itemize}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Awards, Grants, Certifications \& Honors}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\vspace{-2pt}
+	\begin{center}\begin{tabular*}{6.6in}{l@{\extracolsep{\fill}}r}
+		\multicolumn{2}{c}{*** CTEL grant\cftdotfill{\cftdotsep} 2023}\\
+		\multicolumn{2}{c}{CySA+  - CompTIA  \cftdotfill{\cftdotsep} 2020}\\
+		\multicolumn{2}{c}{Project+  - CompTIA  \cftdotfill{\cftdotsep} 2018}\\
+		\multicolumn{2}{c}{Green Tiger of the Month - DePauw University (for my efforts towards sustainability)  \cftdotfill{\cftdotsep} 2013}\\
+		\multicolumn{2}{c}{Travel Grant - Awarded by the International Conference on Advances in Case-Based Reasoning\cftdotfill{\cftdotsep} 2015}\\
+		\multicolumn{2}{c}{Travel Grant - Career Mentoring Workshop at SIGCSE  \cftdotfill{\cftdotsep} 2012}\\
+		\multicolumn{2}{c}{Faculty Development Grant - DePauw University   \cftdotfill{\cftdotsep} 2012}\\
+		\multicolumn{2}{c}{Travel Grant - Awarded by the European Conference on Advances in Case-Based Reasoning\cftdotfill{\cftdotsep} 2008}\\
+%		\multicolumn{2}{c}{Trustees Scholarship - Ohio State University\cftdotfill{\cftdotsep} 1999-2002}\\
+%		\multicolumn{2}{c}{Faculty Award - Indiana University \cftdotfill{\cftdotsep} 1998}\\
+		\vphantom{E}
+\end{tabular*}
+\end{center}\vspace*{-16pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Affiliations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+%\item Association for the Advancement of Artificial Intelligence
+\item Association for Computing Machinery
+\end{itemize}
+
+
+\end{document}
